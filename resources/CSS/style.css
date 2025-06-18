@@ -18,32 +18,27 @@ body {
 }
 
 #site-navigation {
-    display: flex;
     width: 100%;
     border-bottom: 5px solid black;
 }
 #site-navigation ul {
-    padding: 2% 0 2% 0;
     background-image: url("../images/Leaves.jpg");
     background-size: cover;
     display: flex;
-    width: 100%;
-    justify-content: space-around;
     list-style: none;
+    justify-content: space-around;
 }
+
 #site-navigation li {
-    display: flex;
-    justify-content: center;
-    width: 10%;
-    padding: .5rem 2rem;
-    border: 1px solid black;
-    background-color: #B3CDE3;
+
 }
 #site-navigation a {
-    color: black;
-    width: 100%;
+    display: inline-block;
     text-align: center;
-    font-weight: 600;
+    color: black;
+    font-size: 2rem;
+    border: 1px solid black;
+    width: 25vw;
     text-decoration: none;
     background-color: #B3CDE3;
 }
@@ -150,4 +145,119 @@ body {
 .logo {
     width: 100px;
     height: auto;
+}
+
+/* About Page Styling for Smaller Screens and Mobile */
+
+@media only screen and (max-width: 480px){
+    #site-navigation ul {
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr;
+        padding: 0;
+        width: 100%;
+        justify-items: center;
+    }
+    #site-navigation li {
+        padding: 0;
+        margin: 0;
+    }
+    #site-navigation a {
+        padding: 0;
+        margin: 0;
+        width: 50vw;
+        font-size: 2rem;
+    }
+
+    .content-grid {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .resource-box {
+        width: 100%;
+        margin: 0;
+        padding: 1rem 0;
+    }
+}
+
+@media only screen and (max-width: 1300px){
+    #site-navigation ul {
+        display: grid;
+        justify-items: center;
+        grid-template: 1fr 1fr / 1fr 1fr;
+    }
+    .content-grid {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .resource-box {
+        width: 100%;
+        margin: 0;
+        padding: 1rem 0;
+    }
+}
+
+@media only screen and (max-width: 860px){
+    #site-navigation ul {
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr;
+        padding: 0;
+        width: 100%;
+        justify-items: center;
+    }
+    #site-navigation li {
+        padding: 0;
+        margin: 0;
+    }
+    #site-navigation a {
+        padding: 0;
+        margin: 0;
+        width: 50vw;
+        font-size: 2rem;
+    }
+    .intro {
+        margin: 0;
+        padding: 0;
+        font-size: .95rem;
+    }
+
+    .section-head {
+        font-size: 1.25rem;
+    }
+    .content-block{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    #site-navigation ul {
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr;
+        padding: 0;
+        width: 100%;
+        justify-items: center;
+    }
+    #site-navigation li {
+        padding: 0;
+        margin: 0;
+    }
+    #site-navigation a {
+        padding: 0;
+        margin: 0;
+        width: 50vw;
+        font-size: 1.25rem;
+    }
+}
+
+@media only screen and (max-width: 340px){
+    .page-head {
+        font-size: 2rem;
+    }
 }
