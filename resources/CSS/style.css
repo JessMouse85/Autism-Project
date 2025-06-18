@@ -6,8 +6,9 @@
     padding: 0;
 }
 body {
-    background-image: url("../images/Leaves.jpg");
-    background-size: center;
+    background-image: url("../images/bodybg.jpg");
+    background-size: cover;
+    min-height: 100vh;
 }
 .page-head {
     font-weight: 800;
@@ -47,8 +48,11 @@ body {
     background-color: #B3CDE3;
 }
 .section-head {
+    background-color: rgb(156, 212, 173);
     font-size: 2rem;
     text-align: center;
+    margin: 0 auto;
+    width: 85%;
 }
 .section-head a {
     font-size: 2rem;
@@ -63,6 +67,8 @@ body {
     flex-direction: column;
     width: 85%;
     margin: 0 auto;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
 }
 .resource-box {
     background-image: url("../images/infopanel.jpg");
@@ -75,7 +81,8 @@ body {
     padding: 10px;
 }
 
-.resource-box h1 {
+.resource-box .section-head {
+    width: 100%;
     font-size: 1.25rem;
 }
 
@@ -84,7 +91,8 @@ body {
     justify-content: space-around;
     display: flex;
     width: 85%;
-    margin: 0 auto;
+    background-color: transparent;
+    margin: 2% auto;
 }
 
 .resource-box a {
@@ -93,21 +101,14 @@ body {
     font-size: 1.25rem;
 }
 
-.article-summary {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    width: 85%;
-
-}
-
 .article-summary{
+    width: 85%;
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 2%;
+    padding: 2% 0;
     border: 1px solid black;
-    margin-bottom: 2rem;
+    margin: 2rem auto;
     justify-content: center; /* Corrected from justify-items to center content */
     align-items: center; /* Centers items horizontally within the column */
     text-align: center; /* Fallback for non-flex children */
