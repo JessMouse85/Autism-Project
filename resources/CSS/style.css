@@ -4,10 +4,17 @@
     font-size: 16px;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body {
     background-image: url("../images/bodybg.jpg");
     background-size: cover;
+    height: 100vh;
+}
+html body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
     height: 100%;
 }
 .page-head {
@@ -44,6 +51,7 @@ body {
     width: 250px;
     text-decoration: none;
     background-color: #B3CDE3;
+    padding: 0;
 }
 .section-head {
     background-color: rgb(156, 212, 173);
@@ -65,7 +73,9 @@ body {
     flex-direction: column;
     align-items: center;
     width: 85%;
+    height: auto;
     margin: 0 auto;
+    margin-top: 2%;
     margin-bottom: 2rem;
 }
 .resource-box {
@@ -156,6 +166,9 @@ body {
 /* About Page Styling for Smaller Screens and Mobile */
 
 @media only screen and (max-width: 480px){
+    body {
+        width: 100%;
+    }
     #site-navigation {
         margin: 0 auto;
     }
@@ -170,7 +183,7 @@ body {
     .content-block{
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 80%;
         align-items: center;
     }
 
@@ -228,7 +241,12 @@ body {
         padding: 0;
         margin: 0;
     }
-
+    .content-block {
+        justify-self: center;
+        width: 80%;
+        margin: 0;
+        padding: 0;
+    }
     .resource-box {
         width: 85%;
         height: 30vh;
