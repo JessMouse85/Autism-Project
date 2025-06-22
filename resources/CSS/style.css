@@ -8,7 +8,7 @@
 body {
     background-image: url("../images/bodybg.jpg");
     background-size: cover;
-    min-height: 100vh;
+    height: 100%;
 }
 .page-head {
     font-weight: 800;
@@ -18,19 +18,22 @@ body {
 }
 
 #site-navigation {
+    display: flex;
+    justify-content: center;
     width: 100%;
     border-bottom: 5px solid black;
 }
 #site-navigation ul {
+    display: flex;
     background-image: url("../images/Leaves.jpg");
     background-size: cover;
     display: flex;
+    width: 100%;
     list-style: none;
     justify-content: space-around;
 }
 
 #site-navigation li {
-
 }
 #site-navigation a {
     display: inline-block;
@@ -38,7 +41,7 @@ body {
     color: black;
     font-size: 2rem;
     border: 1px solid black;
-    width: 25vw;
+    width: 250px;
     text-decoration: none;
     background-color: #B3CDE3;
 }
@@ -47,7 +50,7 @@ body {
     font-size: 2rem;
     text-align: center;
     margin: 0 auto;
-    width: 85%;
+    width: 100%;
 }
 .section-head a {
     font-size: 2rem;
@@ -55,14 +58,14 @@ body {
 }
 .intro {
     font-size: 1.2rem;
-    margin: 1.2rem 0;
+    margin: 1.2rem 8px;
 }
 .content-block {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 85%;
     margin: 0 auto;
-    padding: 0 2rem;
     margin-bottom: 2rem;
 }
 .resource-box {
@@ -71,7 +74,8 @@ body {
     background-color: red;
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 85%;
+    height: 20vh;
     border: 1px solid black;
     padding: 10px;
 }
@@ -82,12 +86,14 @@ body {
 }
 
 .content-grid {
+    display: grid;
+    justify-items: center;
+    grid-template: 1fr / repeat(3, 1fr);
     position: relative;
-    justify-content: space-around;
-    display: flex;
-    width: 85%;
+    width: 100%;
+    height: 75vh;
     background-color: transparent;
-    margin: 2% auto;
+    margin: 0 auto;
 }
 
 .resource-box a {
@@ -150,13 +156,24 @@ body {
 /* About Page Styling for Smaller Screens and Mobile */
 
 @media only screen and (max-width: 480px){
+    #site-navigation {
+        margin: 0 auto;
+    }
     #site-navigation ul {
         display: grid;
         grid-template: 1fr 1fr / 1fr 1fr;
         padding: 0;
         width: 100%;
-        justify-items: center;
+        justify-content: center;
+        margin: 0 auto;
     }
+    .content-block{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
     #site-navigation li {
         padding: 0;
         margin: 0;
@@ -164,15 +181,15 @@ body {
     #site-navigation a {
         padding: 0;
         margin: 0;
-        width: 50vw;
-        font-size: 2rem;
+        width:200px;
+        font-size: 1.25rem;
     }
 
     .content-grid {
         flex-direction: column;
         width: 100%;
         padding: 0;
-        margin: 0;
+        margin: 0 auto;
     }
     
     .resource-box {
@@ -180,13 +197,30 @@ body {
         margin: 0;
         padding: 1rem 0;
     }
+
+    .section-head{
+        width: 98%;
+        margin: 0 auto;
+    }
 }
 
 @media only screen and (max-width: 1300px){
+    #site-navigation {
+        display: flex;
+        width: 100%;
+    }
     #site-navigation ul {
-        display: grid;
-        justify-items: center;
-        grid-template: 1fr 1fr / 1fr 1fr;
+        display: flex;
+        margin: 0 auto;
+        width: auto;
+    }
+    #site-navigation li {
+
+    }
+    #site-navigation a {
+        justify-items: space-around;
+        font-size: 1.25rem;
+        width: 200px;
     }
     .content-grid {
         flex-direction: column;
@@ -196,9 +230,13 @@ body {
     }
 
     .resource-box {
-        width: 100%;
+        width: 85%;
+        height: 30vh;
         margin: 0;
-        padding: 1rem 0;
+        padding: 1rem 8px;
+    }
+    .section-head{
+        width: 100%;
     }
 }
 
@@ -209,6 +247,7 @@ body {
         padding: 0;
         width: 100%;
         justify-items: center;
+        margin: 0 auto;
     }
     #site-navigation li {
         padding: 0;
@@ -217,8 +256,8 @@ body {
     #site-navigation a {
         padding: 0;
         margin: 0;
-        width: 50vw;
-        font-size: 2rem;
+        width: 200px;
+        font-size: 1.25rem;
     }
     .intro {
         margin: 0;
@@ -228,11 +267,17 @@ body {
 
     .section-head {
         font-size: 1.25rem;
+        width: 100%;
     }
     .content-block{
         margin: 0;
-        padding: 0;
+        padding: 8px;
         width: 100%;
+    }
+    .content-grid {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
 }
 
